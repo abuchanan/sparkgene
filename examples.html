@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Sparkgene Examples</title>
+  </head>
+  <body>
+    <div>
+      <p>update complete within exon, single exon, single gene</p>
+      <div class='sparkgene' data-gene='0,50,100,150'></div>
+      <div class='sparkgene' data-gene='20,30' data-gene-color='gray' data-gene-height='10'></div>
+
+      <p>update complete within exons, multiple isoforms, same exons, single gene</p>
+      <div class='sparkgene' data-gene='0,50,100,150,170,200'></div>
+      <div class='sparkgene' data-gene='0,50,100,150,180,200'></div>
+      <div class='sparkgene' data-gene='20,30' data-gene-color='gray' data-gene-height='10'></div>
+
+      <p>overlapped exon has flanking intron with an alternative splice site on the next exon</p>
+      <div class='sparkgene' data-gene='0,50,100,150,180,200'></div>
+      <div class='sparkgene' data-gene='0,50,120,150,180,200'></div>
+      <div class='sparkgene' data-gene='20,30' data-gene-color='gray' data-gene-height='10'></div>
+
+      <p>overlapped exon has alternative splice site</p>
+      <div class='sparkgene' data-gene='0,50,100,150,180,200'></div>
+      <div class='sparkgene' data-gene='0,70,100,150,180,200'></div>
+      <div class='sparkgene' data-gene='20,30' data-gene-color='gray' data-gene-height='10'></div>
+
+      <p>overlapped exon contains an intron retention event</p>
+      <div class='sparkgene' data-gene='0,50,100,150,180,200'></div>
+      <div class='sparkgene' data-gene='0,150,180,200'></div>
+      <div class='sparkgene' data-gene='20,30' data-gene-color='gray' data-gene-height='10'></div>
+
+      <p>error: potential update overlaps an intron</p>
+      <div class='sparkgene' data-gene='0,20,100,150'></div>
+      <div class='sparkgene' data-gene='0,50,100,150'></div>
+      <div class='sparkgene' data-gene='30,40' data-gene-color='gray' data-gene-height='10'></div>
+
+      <p>error: potential update overlaps an intron</p>
+      <div class='sparkgene' data-gene='0,35,100,150'></div>
+      <div class='sparkgene' data-gene='20,40' data-gene-color='gray' data-gene-height='10'></div>
+
+      <p>error: potential update overlaps exon edge</p>
+      <div class='sparkgene' data-gene='30,60,100,150'></div>
+      <div class='sparkgene' data-gene='20,40' data-gene-color='gray' data-gene-height='10'></div>
+
+      <p>error: multiple genes</p>
+      <div class='sparkgene' data-gene='0,35,100,150'></div>
+      <div class='sparkgene' data-gene='100,150,180,200' data-gene-color='#00F299'></div>
+      <div class='sparkgene' data-gene='120,130' data-gene-color='gray' data-gene-height='10'></div>
+
+      <p>overlapping updates??</p>
+      <div class='sparkgene' data-gene='0,35,80,180'></div>
+      <div class='sparkgene' data-gene='100,130' data-gene-color='gray' data-gene-height='10'></div>
+      <div class='sparkgene' data-gene='120,150' data-gene-color='gray' data-gene-height='10'></div>
+
+
+    </div>
+
+    <script src='sparkgene.js'></script>
+    <script>sparkgene();</script>
+  </body>
+</html>
