@@ -4,6 +4,8 @@
 Given a DOM element with a spark gene definition in its dataset,
 append a `<canvas>` and draw a gene model.
 
+Check out some [examples](http://abuchanan.github.io/sparkgene/examples.html).
+
 Sparkgenes are defined like this:
 
 `<div class='sparkgene' data-gene='0, 5, 10, 15, 18, 20'></div>`
